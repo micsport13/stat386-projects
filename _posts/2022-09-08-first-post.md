@@ -6,4 +6,4 @@ author: Noah Lawrence
 description: A Guide to LaTeX
 image: /assets/images/image5.jpg
 ---
-    Use of $\latex$
+    Use of $\LaTeX$
