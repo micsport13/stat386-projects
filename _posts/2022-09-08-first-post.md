@@ -6,4 +6,4 @@ author: Noah Lawrence
 description: A Guide to LaTeX
 image: /assets/images/image5.jpg
 ---
-$\frac{3}{2}$
+    Use of $\latex$
