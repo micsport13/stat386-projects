@@ -3,13 +3,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>First Post | My Stat 386 Blog</title>
+<title>An Introduction to $\LaTeX$ | My Stat 386 Blog</title>
 <meta name="generator" content="Jekyll v3.9.2" />
-<meta property="og:title" content="First Post" />
+<meta property="og:title" content="An Introduction to $\LaTeX$" />
 <meta name="author" content="Noah Lawrence" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A Guide to $\LaTeX$" />
-<meta property="og:description" content="A Guide to $\LaTeX$" />
+<meta name="description" content="A Guide to $\LaTeX$ and how to utilize it efficiently" />
+<meta property="og:description" content="A Guide to $\LaTeX$ and how to utilize it efficiently" />
 <link rel="canonical" href="http://localhost:4000/stat386-projects/2022/09/20/first-post.html" />
 <meta property="og:url" content="http://localhost:4000/stat386-projects/2022/09/20/first-post.html" />
 <meta property="og:site_name" content="My Stat 386 Blog" />
@@ -18,9 +18,9 @@
 <meta property="article:published_time" content="2022-09-20T00:00:00-06:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/stat386-projects/assets/images/image5.jpg" />
-<meta property="twitter:title" content="First Post" />
+<meta property="twitter:title" content="An Introduction to $\LaTeX$" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Noah Lawrence"},"dateModified":"2022-09-20T00:00:00-06:00","datePublished":"2022-09-20T00:00:00-06:00","description":"A Guide to $\\LaTeX$","headline":"First Post","image":"http://localhost:4000/stat386-projects/assets/images/image5.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/stat386-projects/2022/09/20/first-post.html"},"url":"http://localhost:4000/stat386-projects/2022/09/20/first-post.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Noah Lawrence"},"dateModified":"2022-09-20T00:00:00-06:00","datePublished":"2022-09-20T00:00:00-06:00","description":"A Guide to $\\LaTeX$ and how to utilize it efficiently","headline":"An Introduction to $\\LaTeX$","image":"http://localhost:4000/stat386-projects/assets/images/image5.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/stat386-projects/2022/09/20/first-post.html"},"url":"http://localhost:4000/stat386-projects/2022/09/20/first-post.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/stat386-projects/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/stat386-projects/feed.xml" title="My Stat 386 Blog" /><!----Mathjax---->
  <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
@@ -54,35 +54,60 @@
       <div class="wrapper">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header"><img src="/stat386-projects/assets/images/image5.jpg", alt="", class="featured-image-post"><h1 class="post-title p-name" itemprop="name headline">First Post</h1>
+  <header class="post-header"><img src="/stat386-projects/assets/images/image5.jpg", alt="", class="featured-image-post"><h1 class="post-title p-name" itemprop="name headline">An Introduction to $\LaTeX$</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="2022-09-20T00:00:00-06:00" itemprop="datePublished">Sep 20, 2022
-      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">by Noah Lawrence</span></span><br> <span class="post-meta">  1 min read</span><p><em> <font size="-1">A Guide to $\LaTeX$ </font></em></p><hr style="height:1px;border:none;color:#333;background-color:#333;" />
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">by Noah Lawrence</span></span><br> <span class="post-meta">  4 min read</span><p><em> <font size="-1">A Guide to $\LaTeX$ and how to utilize it efficiently </font></em></p><hr style="height:1px;border:none;color:#333;background-color:#333;" />
   </header>
   
 
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>One important skill for Data Scientists is the ability to convey data in a way that is useful for others.  Using tools such as RMarkdown will make creating reports for your data significantly easier.  One of the best tools included in RMarkdown is LaTeX (commonly seen as $\LaTeX$), which essentially creates mathematical equations as you would see them in material such as websites and textbooks.  Here, I will make a basic guide to start you on your way to learning LaTeX as well as resources to help you find answers to any questions you have.  It is important to note that I don’t know everything about LaTeX and if you find that I missed something, feel free to leave a comment below.</p>
+    <h1 id="introduction">Introduction</h1>
+<p>One important skill for Data Scientists is the ability to convey data in a way that is useful for others.  Using tools such as RMarkdown will make creating reports for your data significantly easier.  One of the best tools included in RMarkdown is LaTeX (commonly seen as $\LaTeX$), which essentially creates mathematical equations as you would see them in material such as websites and textbooks.  Many of the skills learned in this guide will directly translate to RMarkdown, as the syntax is largely the same. Here, I will make a basic guide to start you on your way to learning LaTeX as well as resources to help you find answers to any questions you have.  It is important to note that I don’t know everything about LaTeX and if you find that I missed something, feel free to leave a comment below.</p>
 
-<h1 id="installation">Installation</h1>
-<p>There are 2 good starting places for LaTeX on your computer.  First, is an online resource called Overleaf.  It is a free web-based LaTeX editor that simply</p>
+<h2 id="installation">Installation</h2>
+<p>There are 2 good starting places for LaTeX on your computer.  First, is an online resource called Overleaf.  It is a free web-based LaTeX editor that can compile your LaTeX code into PDF format for easy reports.  The only downside, in my opinion, is the need to create an account because I don’t like having to make an account for every website.</p>
 
-<h1 id="basic-syntax">Basic Syntax</h1>
+<p>The alternative is to compile LaTeX on your local machine.  For Windows, the most common LaTeX typesetting system is MiKTeX, which comes with a TeX editor called TeXWorks.  For Macintosh, MacTeX is the typesetting system.  For Linux, TeXLive is the most common.  Additionally, there are a variety of editors for each of these platforms, including some that are multiplatform, that you can use to your needs and liking.</p>
+
+<p>Note, this installation will take quite a while because there are such a large number of packages that are included in the base LaTeX installation.  After this installs, you should be able to open your LaTeX editor and begin typing in LaTeX.</p>
+
+<p>For more help on installing for Windows, go <a href="https://miktex.org/howto/install-miktex">here</a>.<br />
+For help installing on MaC, go <a href="https://www.tug.org/mactex/index.html">here</a>.<br />
+For Linux, due to the variety of distributions, I will simply say, Google is your friend here.</p>
+
+<h2 id="basic-syntax">Basic Syntax</h2>
+
+<p>LaTeX is a powerful tool to format mathematical formulas in a way that is readable but that isn’t its only use.  It can also be used to format documents for reports that are readable and can even include images or charts from tools such as RStudio.  Many academic papers, especially within science and mathematics, are formatted with LaTeX so it is important to learn it.</p>
+
+<p>To create your first document, the following code will be helpful to create it:</p>
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">\documentclass{article}</code><br />
+<code class="language-plaintext highlighter-rouge">\begin{document}</code><br />
+<code class="language-plaintext highlighter-rouge">First document. This is a simple example, with no</code> <br />
+<code class="language-plaintext highlighter-rouge">extra parameters or packages included.</code><br />
+<code class="language-plaintext highlighter-rouge">\end{document}</code></p>
+</blockquote>
+
+<p>The first part, <code class="language-plaintext highlighter-rouge">\documentclass{article}</code> defines the type of document you are creating.  This will call from templates installed on your computer already.  The second part combined with its closing tag is the <code class="language-plaintext highlighter-rouge">\begin{document}</code> and <code class="language-plaintext highlighter-rouge">\end{document}</code> is basically the content of your document.  Everything inside of these tags will be what shows up compiled into a PDF.  If any LaTeX code shows up outside of these tags, it will not appear within your PDF.  The following lines are plain text that will be included.  It is important to note that formatting is not included within this part and the fact that the content is on two lines doesn’t mean that it will appear that way on the PDF.  To create a new line, you will use the <code class="language-plaintext highlighter-rouge">\\</code> characters.</p>
+
 <p>One of the most important things in LaTeX (pronounced lay-tech/tek) is the ability to inline mathematical functions.  For example two-thirds can be represented in Latex as <code class="language-plaintext highlighter-rouge">$\frac{2}{3}$</code> or $\frac{2}{3}$.  The dollar signs represent inline math functions.  Everything between the two dollar signs will be converted to look like how we most often see it written.  Additionally, there is a math mode that simply uses 2 dollar signs instead of one as is much more useful for long equations.</p>
 
-<p>Within LaTeX, there are additional functions that allow you greater formatting within your document.  For example, you can create equations using the <code class="language-plaintext highlighter-rouge">\begin{equation}</code> and <code class="language-plaintext highlighter-rouge">\end{equation}</code> which will push the equation to the middle of the page.</p>
+<p>Within LaTeX, there are additional functions that allow you greater formatting within your document.  For example, you can create equations using the <code class="language-plaintext highlighter-rouge">\begin{equation}</code> and <code class="language-plaintext highlighter-rouge">\end{equation}</code> which will push the equation to the middle of the page.  These are most often called environments and will have specific formatting such as the equation environment shown below.</p>
 
 <p>The PMF of the normal distribution is:
 \begin{equation}
 \frac{1}{\sigma \sqrt{2\pi}}e^{\frac{-1}{2}\frac{x-\mu}{\sigma}^2}
 \end{equation}</p>
 
-<p>LaTeX is a powerful tool to format mathematical formulas in a way that is readable</p>
+<p>All of these things will need to be included within the document tags to appear in your document.  Since this guide is not by any means exhaustive, I recommend that you try getting the environment setup on your computer and trying out LaTeX for yourself.  Whenever you run into an error, try checking the logs to see where the error was thrown and more often than not, it’s missing parenthesis or missing a closing tag for your environments.  When in doubt, Google for the specific error to determine the specific error.  I also recommend visiting Overleaf’s documentation and guide, as that will teach much more of the basics and will give you a better idea of the possibilities of LaTeX.</p>
+<h2 id="further-help">Further Help</h2>
 
-<h1 id="further-help">Further Help</h1>
-
-<p><a href="https://www.latex-project.org/help/documentation/usrguide.pdf">LaTeX Documentation</a></p>
+<p><a href="https://www.latex-project.org/help/documentation/usrguide.pdf">LaTeX Documentation</a><br />
+<a href="https://tex.stackexchange.com/">Tex Stack Overflow</a><br />
+<a href="https://overleaf.com/">Overleaf</a><br />
+<a href="https://www.overleaf.com/learn">Overleaf Documentation</a></p>
 
   </div>
 <script src="https://utteranc.es/client.js"
