@@ -23,13 +23,14 @@
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Noah Lawrence"},"dateModified":"2022-09-20T00:00:00-06:00","datePublished":"2022-09-20T00:00:00-06:00","description":"A Guide to $\\LaTeX$ and how to utilize it efficiently","headline":"An Introduction to $\\LaTeX$","image":"http://localhost:4000/stat386-projects/assets/images/image5.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/stat386-projects/2022/09/20/first-post.html"},"url":"http://localhost:4000/stat386-projects/2022/09/20/first-post.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/stat386-projects/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/stat386-projects/feed.xml" title="My Stat 386 Blog" /><!----Mathjax---->
- <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+ <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: {} }); </script>
  <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [['$','$'], ['\\(','\\)']],
       displayMath: [['$$','$$'], ['\[','\]']],
-      processEscapes: true
+      processEscapes: true,
+      tags: 'ams'
     }
   });
  </script>
@@ -57,7 +58,7 @@
   <header class="post-header"><img src="/stat386-projects/assets/images/image5.jpg", alt="", class="featured-image-post"><h1 class="post-title p-name" itemprop="name headline">An Introduction to $\LaTeX$</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="2022-09-20T00:00:00-06:00" itemprop="datePublished">Sep 20, 2022
-      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">by Noah Lawrence</span></span><br> <span class="post-meta">  4 min read</span><p><em> <font size="-1">A Guide to $\LaTeX$ and how to utilize it efficiently </font></em></p><hr style="height:1px;border:none;color:#333;background-color:#333;" />
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">by Noah Lawrence</span></span><br> <span class="post-meta">  5 min read</span><p><em> <font size="-1">A Guide to $\LaTeX$ and how to utilize it efficiently </font></em></p><hr style="height:1px;border:none;color:#333;background-color:#333;" />
   </header>
   
 
@@ -96,12 +97,12 @@ For Linux, due to the variety of distributions, I will simply say, Google is you
 
 <p>Within LaTeX, there are additional functions that allow you greater formatting within your document.  For example, you can create equations using the <code class="language-plaintext highlighter-rouge">\begin{equation}</code> and <code class="language-plaintext highlighter-rouge">\end{equation}</code> which will push the equation to the middle of the page.  These are most often called environments and will have specific formatting such as the equation environment shown below.</p>
 
-<p>The PMF of the normal distribution is:
+<p>The PDF of the normal distribution is:
 \begin{equation}
-\frac{1}{\sigma \sqrt{2\pi}}e^{\frac{-1}{2}\frac{x-\mu}{\sigma}^2}
+\frac{1}{\sigma \sqrt{2\pi}}e^{\frac{-1}{2}(\frac{x-\mu}{\sigma})^2}
 \end{equation}</p>
 
-<p>All of these things will need to be included within the document tags to appear in your document.  Since this guide is not by any means exhaustive, I recommend that you try getting the environment setup on your computer and trying out LaTeX for yourself.  Whenever you run into an error, try checking the logs to see where the error was thrown and more often than not, it’s missing parenthesis or missing a closing tag for your environments.  When in doubt, Google for the specific error to determine the specific error.  I also recommend visiting Overleaf’s documentation and guide, as that will teach much more of the basics and will give you a better idea of the possibilities of LaTeX.</p>
+<p>All of these things will need to be included within the document tags to appear in your document.  Since this guide is not by any means exhaustive, I recommend that you try getting the environment setup on your computer and trying out LaTeX for yourself.  Whenever you run into an error, try checking the logs to see where the error was thrown and more often than not, it’s missing parenthesis or missing a closing tag for your environments.  When in doubt, Google for the specific error to determine the specific error.  I also recommend visiting Overleaf’s documentation and guide, as that will teach much more of the basics and will give you a better idea of the possibilities of LaTeX.  Go on and create your own $\LaTeX$ documents!</p>
 <h2 id="further-help">Further Help</h2>
 
 <p><a href="https://www.latex-project.org/help/documentation/usrguide.pdf">LaTeX Documentation</a><br />

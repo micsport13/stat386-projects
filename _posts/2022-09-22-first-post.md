@@ -37,12 +37,12 @@ One of the most important things in LaTeX (pronounced lay-tech/tek) is the abili
 
 Within LaTeX, there are additional functions that allow you greater formatting within your document.  For example, you can create equations using the `\begin{equation}` and `\end{equation}` which will push the equation to the middle of the page.  These are most often called environments and will have specific formatting such as the equation environment shown below.
 
-The PMF of the normal distribution is:
+The PDF of the normal distribution is:
 \begin{equation}
-\frac{1}{\sigma \sqrt{2\pi}}e^{\frac{-1}{2}\frac{x-\mu}{\sigma}^2}
+\frac{1}{\sigma \sqrt{2\pi}}e^{\frac{-1}{2}(\frac{x-\mu}{\sigma})^2}
 \end{equation}
 
-All of these things will need to be included within the document tags to appear in your document.  Since this guide is not by any means exhaustive, I recommend that you try getting the environment setup on your computer and trying out LaTeX for yourself.  Whenever you run into an error, try checking the logs to see where the error was thrown and more often than not, it's missing parenthesis or missing a closing tag for your environments.  When in doubt, Google for the specific error to determine the specific error.  I also recommend visiting Overleaf's documentation and guide, as that will teach much more of the basics and will give you a better idea of the possibilities of LaTeX.
+All of these things will need to be included within the document tags to appear in your document.  Since this guide is not by any means exhaustive, I recommend that you try getting the environment setup on your computer and trying out LaTeX for yourself.  Whenever you run into an error, try checking the logs to see where the error was thrown and more often than not, it's missing parenthesis or missing a closing tag for your environments.  When in doubt, Google for the specific error to determine the specific error.  I also recommend visiting Overleaf's documentation and guide, as that will teach much more of the basics and will give you a better idea of the possibilities of LaTeX.  Go on and create your own $\LaTeX$ documents!
 ## Further Help
 
 <a href="https://www.latex-project.org/help/documentation/usrguide.pdf">LaTeX Documentation</a>\
