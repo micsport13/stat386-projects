@@ -3,11 +3,11 @@ layout: post
 title:  "An Introduction to $\\LaTeX$"
 date:   2022-09-20
 author: Noah Lawrence
-description: A Guide to $\LaTeX$ and how to utilize it efficiently
+description: A Guide to $\LaTeX$ (pronounced lay-tech/tek) and how to utilize it efficiently
 image: /assets/images/image5.jpg
 ---
 # Introduction
-One important skill for Data Scientists is the ability to convey data in a way that is useful for others.  Using tools such as RMarkdown will make creating reports for your data significantly easier.  One of the best tools included in RMarkdown is LaTeX (commonly seen as $\LaTeX$), which essentially creates mathematical equations as you would see them in material such as websites and textbooks.  Many of the skills learned in this guide will directly translate to RMarkdown, as the syntax is largely the same. Here, I will make a basic guide to start you on your way to learning LaTeX as well as resources to help you find answers to any questions you have.  It is important to note that I don't know everything about LaTeX and if you find that I missed something, feel free to leave a comment below.
+One important skill for Data Scientists is the ability to convey data in a way that is useful for others.  Using tools such as RMarkdown will make creating reports for your data significantly easier.  One of the best tools included in RMarkdown is LaTeX (commonly seen as $\LaTeX$ and pronounced lay-tech/tek), which essentially creates mathematical equations as you would see them in material such as websites and textbooks.  Many of the skills learned in this guide will directly translate to RMarkdown, as the syntax is largely the same. Here, I will make a basic guide to start you on your way to learning LaTeX as well as resources to help you find answers to any questions you have.  It is important to note that I don't know everything about LaTeX and if you find that I missed something, feel free to leave a comment below.
 
 ## Installation
 There are 2 good starting places for LaTeX on your computer.  First, is an online resource called Overleaf.  It is a free web-based LaTeX editor that can compile your LaTeX code into PDF format for easy reports.  The only downside, in my opinion, is the need to create an account because I don't like having to make an account for every website.
@@ -33,7 +33,7 @@ To create your first document, the following code will be helpful to create it:
 
 The first part, `\documentclass{article}` defines the type of document you are creating.  This will call from templates installed on your computer already.  The second part combined with its closing tag is the `\begin{document}` and `\end{document}` is basically the content of your document.  Everything inside of these tags will be what shows up compiled into a PDF.  If any LaTeX code shows up outside of these tags, it will not appear within your PDF.  The following lines are plain text that will be included.  It is important to note that formatting is not included within this part and the fact that the content is on two lines doesn't mean that it will appear that way on the PDF.  To create a new line, you will use the `\\` characters.
 
-One of the most important things in LaTeX (pronounced lay-tech/tek) is the ability to inline mathematical functions.  For example two-thirds can be represented in Latex as `$\frac{2}{3}$` or $\frac{2}{3}$.  The dollar signs represent inline math functions.  Everything between the two dollar signs will be converted to look like how we most often see it written.  Additionally, there is a math mode that simply uses 2 dollar signs instead of one as is much more useful for long equations.  
+One of the most important things in LaTeX is the ability to inline mathematical functions.  For example two-thirds can be represented in Latex as `$\frac{2}{3}$` or $\frac{2}{3}$.  The dollar signs represent inline math functions.  Everything between the two dollar signs will be converted to look like how we most often see it written.  Additionally, there is a math mode that simply uses 2 dollar signs instead of one as is much more useful for long equations.  
 
 Within LaTeX, there are additional functions that allow you greater formatting within your document.  For example, you can create equations using the `\begin{equation}` and `\end{equation}` which will push the equation to the middle of the page.  These are most often called environments and will have specific formatting such as the equation environment shown below.
 
