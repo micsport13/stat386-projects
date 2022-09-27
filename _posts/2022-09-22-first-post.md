@@ -17,7 +17,7 @@ The alternative is to compile LaTeX on your local machine.  For Windows, the mos
 Note, this installation will take quite a while because there are such a large number of packages that are included in the base LaTeX installation.  After this installs, you should be able to open your LaTeX editor and begin typing in LaTeX.
 
 For more help on installing for Windows, go <a href="https://miktex.org/howto/install-miktex">here</a>.\
-For help installing on MaC, go <a href="https://www.tug.org/mactex/index.html">here</a>.\
+For help installing on Mac, go <a href="https://www.tug.org/mactex/index.html">here</a>.\
 For Linux, due to the variety of distributions, I will simply say, Google is your friend here.
 
 ## Basic Syntax
@@ -31,9 +31,9 @@ To create your first document, the following code will be helpful to create it:
 > `extra parameters or packages included.`\
 > `\end{document}`
 
-The first part, `\documentclass{article}` defines the type of document you are creating.  This will call from templates installed on your computer already.  The second part combined with its closing tag is the `\begin{document}` and `\end{document}` is basically the content of your document.  Everything inside of these tags will be what shows up compiled into a PDF.  If any LaTeX code shows up outside of these tags, it will not appear within your PDF.  The following lines are plain text that will be included.  It is important to note that formatting is not included within this part and the fact that the content is on two lines doesn't mean that it will appear that way on the PDF.  To create a new line, you will use the `\\` characters.
+The first part, `\documentclass{article}` defines the type of document you are creating.  This will call from templates installed on your computer already.  The second part combined with its closing tag is the `\begin{document}` and `\end{document}` is basically the content of your document.  Everything inside of these tags will be what shows up compiled into a PDF/other document format.  If any LaTeX code shows up outside of these tags, it will not appear within your document.  The following lines are plain text that will be included.  It is important to note that formatting is not included within this part and the fact that the content is on two lines doesn't mean that it will appear that way on the document.  To create a new line, you will use the `\\` characters.
 
-One of the most important things in LaTeX is the ability to inline mathematical functions.  For example two-thirds can be represented in Latex as `$\frac{2}{3}$` or $\frac{2}{3}$.  The dollar signs represent inline math functions.  Everything between the two dollar signs will be converted to look like how we most often see it written.  Additionally, there is a math mode that simply uses 2 dollar signs instead of one as is much more useful for long equations.  
+One of the most important things in LaTeX is the ability to inline mathematical functions.  For example two-thirds can be represented in Latex as `$\frac{2}{3}$` or $\frac{2}{3}$.  The dollar signs represent inline math functions.  Everything between the two dollar signs will be converted to a mathematical equation, assuming no syntax errors.  Additionally, there is a math mode that simply uses 2 dollar signs instead of one as is much more useful for long equations.  
 
 Within LaTeX, there are additional functions that allow you greater formatting within your document.  For example, you can create equations using the `\begin{equation}` and `\end{equation}` which will push the equation to the middle of the page.  These are most often called environments and will have specific formatting such as the equation environment shown below.
 
@@ -48,4 +48,4 @@ All of these things will need to be included within the document tags to appear 
 <a href="https://www.latex-project.org/help/documentation/usrguide.pdf">LaTeX Documentation</a>\
 <a href="https://tex.stackexchange.com/">Tex Stack Overflow</a>\
 <a href="https://overleaf.com/">Overleaf</a>\
-<a href="https://www.overleaf.com/learn">Overleaf Documentation</a>
+<a href="https://www.overleaf.com/learn">Learn LaTeX on Overleaf</a>
