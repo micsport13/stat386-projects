@@ -4,7 +4,7 @@ title:  "An Introduction to $\\LaTeX$"
 date:   2022-09-20
 author: Noah Lawrence
 description: A Guide to $\LaTeX$ (pronounced lay-tech/tek) and how to utilize it efficiently
-image: /assets/images/image5.jpg
+image: /assets/images/LaTeX.jpg
 ---
 # Introduction
 One important skill for Data Scientists is the ability to convey data in a way that is useful for others.  Using tools such as RMarkdown will make creating reports for your data significantly easier.  One of the best tools included in RMarkdown is LaTeX (commonly seen as $\LaTeX$ and pronounced lay-tech/tek), which essentially creates mathematical equations as you would see them in material such as websites and textbooks.  Many of the skills learned in this guide will directly translate to RMarkdown, as the syntax is largely the same. Here, I will make a basic guide to start you on your way to learning LaTeX as well as resources to help you find answers to any questions you have.  It is important to note that I don't know everything about LaTeX and if you find that I missed something, feel free to leave a comment below.
