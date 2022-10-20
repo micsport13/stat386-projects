@@ -58,7 +58,7 @@
   <header class="post-header"><img src="/stat386-projects/assets/images/stockmarket.jpg", alt="", class="featured-image-post"><h1 class="post-title p-name" itemprop="name headline">Webscraping Stock Market Data</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="2022-10-18T00:00:00-06:00" itemprop="datePublished">Oct 18, 2022
-      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">by Noah Lawrence</span></span><br> <span class="post-meta">  3 min read</span><p><em> <font size="-1">How to pull in Stock Data using an API </font></em></p><hr style="height:1px;border:none;color:#333;background-color:#333;" />
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">by Noah Lawrence</span></span><br> <span class="post-meta">  4 min read</span><p><em> <font size="-1">How to pull in Stock Data using an API </font></em></p><hr style="height:1px;border:none;color:#333;background-color:#333;" />
   </header>
   
 
@@ -69,13 +69,25 @@
 </div>
 
 <h1 id="introduction-to-api-use">Introduction to API use</h1>
-<p>API (application programming interface) is a tool that is built into many web services that allow for applications to retrieve data from a server.  In the data science realm, this most often shows up as get requests, which are requests that pull information from the web server.  This is useful in obtaining the data used within web sites but are formatted in such a way that may make webscraping difficult or only a specific subset of the data is displayed on the website.  API’s are also useful in variable data, such as in the BYU app where it will call the API to figure out what your classes are and when they are.  This data will change on a semester basis but the underlying code doesn’t need to be changed that much because the application simply calls to the API created by BYU.  In this post, we will show how to use AlphaVantage’s API to pull stock data.</p>
+<p>API (application programming interface) is a tool that is built into many web services that allow for applications to retrieve data from a server.  In the data science realm, this most often shows up as get requests, which are requests that pull information from the web server.  This is useful in obtaining the data used within web sites but are formatted in such a way that may make webscraping difficult or only a specific subset of the data is displayed on the website.  API’s are also useful in variable data, such as in the BYU app where it will call the API to figure out what your classes are and when they are.  This data will change on a semester basis but the underlying code doesn’t need to be changed that much because the application simply calls to the API created by BYU.  In this post, we will show how to use AlphaVantage’s API to pull stock data. Another benefit of API’s is that they have been purposely integrated into the web service so you know that your API calls are what the developers wanted and are ethical.  Just make sure to use the API as instructed by the documentation and terms of service.</p>
 
 <h1 id="obtaining-an-api-key">Obtaining an API key</h1>
 <p>In order to limit the number of requests and limit the data to authorized users, API will often require authentication using keys.  In the case of AlphaVantage, they offer free keys to anyone who signs up for the service.  That can be done <a href="https://www.alphavantage.co/support/#api-key">here</a>.  When you sign up, it will generate an API key that you can save to your file.  Please remember that these keys are sensitive and should not be shared with anyone.  Additionally, remember that one of the best ways to protect your key is to save it in another file and simply read the file from your program.  You should not hard code your API key into your code, especially in the case that you open source the code.  Once you obtain the API key, continue on to the next step.</p>
 
 <h1 id="calling-the-api">Calling the API</h1>
-<p>The best place to start for API calls is the documentation.  When a company releases an API, it often comes with documentation for the API.  In the case of AlphaVantage, it is extremely simple.  It is structured like this: https://www.alphavantage.co/query?function=FUNCTION&amp;symbol=SYMBOL&amp;apikey=APIKEY.  First is the function keyword, which is included in the API documentation.  Some of these functions are specifically premium features but it is listed in the documentation regarding which are premium and which are not.  Following the function keyword is the SYMBOL keyword which is simply the stock ticker symbol, which can be easily searched on google.  Finally comes the APIKEY keyword which is where the API key is placed.  As mentioned before, <b>DO NOT</b> include this key directly in your code.  Often times, you will read this value in to a variable and that variable can be passed using {} like so …&amp;apikey={your_api_key_variable_here} which makes it easier to obscure your api key.  When all of these variables are put in place, the API will often return a JSON file with all of the data that you queried.  There are additional parameters that can be passed in but I will not cover them here.  I would refer to the documentation found at the end of this post.</p>
+<p>The best place to start for API calls is the documentation.  When a company releases an API, it often comes with documentation for the API.  In the case of AlphaVantage, it is extremely simple.  It is structured like this:</p>
+
+<div style="text-align: center">https://www.alphavantage.co/query?function=FUNCTION&amp;symbol=SYMBOL&amp;apikey=APIKEY </div>
+<p><br />
+First is the function keyword, which is included in the API documentation.  Some of these functions are specifically premium features but it is listed in the documentation regarding which are premium and which are not.  A list of the functions can be found <a href="https://www.alphavantage.co/documentation/">here</a>.  Following the function keyword is the SYMBOL keyword which is simply the stock ticker symbol, which can be easily searched on google.  You can also search for symbols right here as well by searching for the company name (Note, this will redirect you to another site):</p>
+<div style="text-align: center">
+<form action="https://stockcharts.com/search" method="GET"> 
+  <input type="text" name="q" class="search" placeholder="Lookup stock: " />
+  <input type="hidden" name="section" value="symbols" />
+</form>
+</div>
+<p><br />
+ Finally comes the APIKEY keyword which is where the API key is placed.  As mentioned before, <b>DO NOT</b> include this key directly in your code.  Often times, you will read this value in to a variable and that variable can be passed using {} like so …&amp;apikey={your_api_key_variable_here} which makes it easier to obscure your api key.  When all of these variables are put in place, the API will often return a JSON file with all of the data that you queried.  There are additional parameters that can be passed in but I will not cover them here.  I would refer to the documentation found at the end of this post.</p>
 <div style="text-align: center">
 <img src="/stat386-projects/assets/images/alpha_vantage.jpg" />
 </div>
