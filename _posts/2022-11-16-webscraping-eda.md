@@ -8,7 +8,7 @@ image: /assets/images/faang.jpg
 ---
 
 # Introduction
-In this blog post, we will be analyzing stock data pulled from AlphaVantage's API, namely the FAANG Stocks (Facebook, Apple, Amazon, Netflix, and Google or Alphabet).  I wanted to compare these stocks and see how some of the trends that these stocks followed.  Since these companies have been grouped together because they are within the same industry, I suspect we will see some correlation but let's see what the data says.  If you would like to see how this data was obtained, please refer to my last post <a href="https://micsport13.github.io/stat386-projects/2022/10/18/webscraping-post.html">here</a>.  Let's get into it! (Also, I colored the charts that match the colors of the companies they represent)
+In this blog post, we will be analyzing stock data pulled from AlphaVantage's API, namely the FAANG Stocks (Facebook, Apple, Amazon, Netflix, and Google or Alphabet).  I wanted to compare these stocks and see how some of the trends that these stocks followed.  Since these companies have been grouped together because they are within the same industry, I suspect we will see some correlation but let's see what the data says.  If you would like to see how this data was obtained, please refer to my last post <a href="https://micsport13.github.io/stat386-projects/2022/10/18/webscraping-post.html">here</a>.  If you would like to know how to create these charts from the data, please refer to the link at the bottom of this post.  Let's get into it! (Also, I colored the charts that match the colors of the companies they represent)
 
 # Data Collection
 First, one of the things I wanted to do was draw a line plot with all of the stocks overlayed, just to get a general idea of the data.
