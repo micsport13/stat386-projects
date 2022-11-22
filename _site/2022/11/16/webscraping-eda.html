@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>FAANG: A Comparison of the Titans of Industry | My Stat 386 Blog</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="FAANG: A Comparison of the Titans of Industry" />
+<meta name="author" content="Noah Lawrence" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Analyzing Data pulled from the FAANG Stocks in an intuitive blog format" />
+<meta property="og:description" content="Analyzing Data pulled from the FAANG Stocks in an intuitive blog format" />
+<link rel="canonical" href="http://localhost:4000/stat386-projects/2022/11/16/webscraping-eda.html" />
+<meta property="og:url" content="http://localhost:4000/stat386-projects/2022/11/16/webscraping-eda.html" />
+<meta property="og:site_name" content="My Stat 386 Blog" />
+<meta property="og:image" content="http://localhost:4000/stat386-projects/assets/images/faang.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-11-16T00:00:00-07:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/stat386-projects/assets/images/faang.jpg" />
+<meta property="twitter:title" content="FAANG: A Comparison of the Titans of Industry" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Noah Lawrence"},"dateModified":"2022-11-16T00:00:00-07:00","datePublished":"2022-11-16T00:00:00-07:00","description":"Analyzing Data pulled from the FAANG Stocks in an intuitive blog format","headline":"FAANG: A Comparison of the Titans of Industry","image":"http://localhost:4000/stat386-projects/assets/images/faang.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/stat386-projects/2022/11/16/webscraping-eda.html"},"url":"http://localhost:4000/stat386-projects/2022/11/16/webscraping-eda.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/stat386-projects/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/stat386-projects/feed.xml" title="My Stat 386 Blog" /><!----Mathjax---->
+ <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: {} }); </script>
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      tags: 'ams'
+    }
+  });
+ </script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/stat386-projects/">My Stat 386 Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/stat386-projects/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header"><img src="/stat386-projects/assets/images/faang.jpg", alt="", class="featured-image-post"><h1 class="post-title p-name" itemprop="name headline">FAANG: A Comparison of the Titans of Industry</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-11-16T00:00:00-07:00" itemprop="datePublished">Nov 16, 2022
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">by Noah Lawrence</span></span><br> <span class="post-meta">  3 min read</span><p><em> <font size="-1">Analyzing Data pulled from the FAANG Stocks in an intuitive blog format </font></em></p><hr style="height:1px;border:none;color:#333;background-color:#333;" />
+  </header>
+  
+
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="introduction">Introduction</h1>
+<p>In this blog post, we will be analyzing stock data pulled from AlphaVantage’s API, namely the FAANG Stocks (Facebook, Apple, Amazon, Netflix, and Google or Alphabet).  I wanted to compare these stocks and see how some of the trends that these stocks followed.  Since these companies have been grouped together because they are within the same industry, I suspect we will see some correlation but let’s see what the data says.  If you would like to see how this data was obtained, please refer to my last post <a href="https://micsport13.github.io/stat386-projects/2022/10/18/webscraping-post.html">here</a>.  Let’s get into it! (Also, I colored the charts that match the colors of the companies they represent)</p>
+
+<h1 id="data-collection">Data Collection</h1>
+<p>First, one of the things I wanted to do was draw a line plot with all of the stocks overlayed, just to get a general idea of the data.</p>
+
+<p><img src="/stat386-projects/assets/images/EDA/FAANG_lineplot.png" /></p>
+
+<p>As shown in the plot, we can see all of the stock prices for the companies within the FAANG group.  Most of the stocks have similar prices with the exception of Netflix, which costs more per share.  It is important to note that during this time period, Google went through a 20:1 split and so the data has been adjusted accordingly to accomodate this split.  Amazon also went through a split but not during the time period of the data and so has already been adjusted.</p>
+
+<p>Next, I wanted to compare the differences of the intraday highs achieved by each stock which is shown below.  Interestingly, Netflix was the only stock that had outliers, indicating over the course of the previous 100 days of stock trading (August 28th-November 16th is the time period for the collected data).<br />
+<img src="/stat386-projects/assets/images/EDA/FAANG_boxplot_highs.png" /></p>
+
+<p>Another interesting measurement is to compare the intraday ranges for stocks.  I calculated this by taking the difference between the high and low and divided this value by the adjusted close of the stock.  This was done to account for the differences in price of the stock. <br />
+<img src="/stat386-projects/assets/images/EDA/FAANG_boxplot_differences.png" /></p>
+
+<p>I wanted to compare the volume of the shares, which represents the total number of shares sold over the course of the day.  As shown in the graph, many of the shares have similar amounts of traded shares.  Often times, on certain days, the total amount of trading will spike, such as in the case of tech news or major economic news. In the increase of share volume, it may be an indication of news with the stock and is helpful in identifying events related to the stock.
+<img src="/stat386-projects/assets/images/EDA/FAANG_lineplot_volume.png" /></p>
+
+<p>Finally, I wanted to compare the total amount of money traded per day.  I created a plot that shows all of the plots that compares all of the shares and the total amount of money traded during the course of the day.  That plot is shown below.
+<img src="/stat386-projects/assets/images/EDA/FAANG_lineplot_totalvaluetraded.png" /></p>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>As shown by this data, we can see how related stocks will have some similar characteristics and it helps us to understand how many stocks are influenced by the movement of other shares on the market.  In the next and final post, I will discuss how all of the data we collected turns into something that we can use to explain real life scenarios.</p>
+
+<p>For all of the data used in this post, please visit the GitHub <a href="https://github.com/micsport13/webscraping-project">here</a></p>
+
+  </div>
+<script src="https://utteranc.es/client.js"
+        repo="micsport13/stat386-projects"
+        issue-term="pathname"
+        label="💬"
+        theme="boxy-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/stat386-projects/2022/11/16/webscraping-eda.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/stat386-projects/"></data>
+
+  <div class="wrapper">
+
+  <!-- <h2 class="footer-heading">My Stat 386 Blog</h2> -->
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Noah Lawrence</li><li><a class="u-email" href="mailto:micsport13@gmail.com">micsport13@gmail.com</a></li><li>&copy; NL 2022 </li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/micsport13"><svg class="svg-icon"><use xlink:href="/stat386-projects/assets/minima-social-icons.svg#github"></use></svg> <span class="username">micsport13</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+        <!-- <p class="rss-subscribe">subscribe <a href="/stat386-projects/feed.xml">via RSS</a></p> -->
+        <p class="banner-btn"><a class="banner-btn-item" href="/stat386-projects/feed.xml">subscribe via RSS </a></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
